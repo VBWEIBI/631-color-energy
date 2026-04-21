@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script>
+        // GitHub Pages SPA 404 redirect
+        // This script saves the current URL to sessionStorage and redirects to index.html
+        // The index.html script will then restore the original URL
+        
+        // Get the current full URL path
+        var l = window.location;
+        
+        // Store the full path in sessionStorage for index.html to retrieve
+        sessionStorage.redirect = l.pathname + l.search + l.hash;
+        
+        // Redirect to index.html at the root of the repository
+        // For a repo at https://vbweibi.github.io/631-color-energy/
+        // This redirects to https://vbweibi.github.io/631-color-energy/index.html
+        l.replace('/631-color-energy/index.html');
+    </script>
+</head>
+<body>
+</body>
+</html>
